@@ -2,11 +2,11 @@
 	https://www.html5rocks.com/en/tutorials/file/dndfiles/
 */
 
-function start(e){
-function raedFiles(files){
+
+function readFiles(files){
     var output = [];
     for (var i = 0, f; f = files[i]; i++){
-    output.push('<li><strong>', escape(f.name), '</strong>(', f.type || 'n/a', ') - '
+    output.push('<li><strong>', escape(f.name), '</strong>(', f.type || 'n/a', ') - ',
                f.size, ' bytes, last modified: ',
                f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
                '</li>');
@@ -31,7 +31,8 @@ for (var i = 0, f; f = files[i]; i++){
         document.getElementById('content').insertBefore(span, null);
     }
    }
-}    
+ }
+
 function handleFileSelect(evt){
     var files = evt.target.files;
 

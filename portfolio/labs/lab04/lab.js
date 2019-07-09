@@ -11,7 +11,7 @@ $('#b1').on('click', function(){
     $('#d2').html('');
 
     for (var i = 0; i < 16; i++){
-        var r = Math.floor((Marh.random() * 4));
+        var r = Math.floor((Math.random() * 4));
         $('#d2').append('<img src="./joker-card.svg">');
 
 
